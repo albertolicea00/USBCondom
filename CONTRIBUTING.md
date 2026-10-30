@@ -21,4 +21,4 @@ Keep each commit focused. Explain meaningful behavior changes and validation in 
 
 ## Validation
 
-Run `dotnet build src/USBGuard/USBGuard.csproj -c Release` with the .NET 8 SDK on Windows. Follow `docs/operations.md` for device and Defender checks. Report checks that were not performed. Never describe the prototype as enforcing system-wide execution blocking.
+Run `dotnet build src/USBCondom/USBCondom.csproj -c Release` with the .NET 8 SDK on Windows. Follow `docs/operations.md` for device and Defender checks. Report checks that were not performed. Never describe the prototype as enforcing system-wide execution blocking.

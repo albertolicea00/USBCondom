@@ -1,4 +1,4 @@
-# USB Guard
+# USBCondom
 
 A .NET 8 WPF prototype for copy-shop workstations, with a Windows 11 inspired interface in English.
 
@@ -9,7 +9,7 @@ A .NET 8 WPF prototype for copy-shop workstations, with a Windows 11 inspired in
 Install the .NET 8 SDK on Windows 11, then run:
 
 ```powershell
-dotnet run --project src/USBGuard/USBGuard.csproj
+dotnet run --project src/USBCondom/USBCondom.csproj
 ```
 
 ## Features
@@ -20,7 +20,7 @@ dotnet run --project src/USBGuard/USBGuard.csproj
 - Release an entire import to Safe only when no file is flagged and Defender reports success.
 - Never launch source files from the interface.
 
-Imports live under `%LOCALAPPDATA%\USBGuard\Incoming` and `Safe`. Errors retain the import for manual review. These folders are ordinary folders, not an isolated sandbox. No automatic deletion is performed.
+Imports live under `%LOCALAPPDATA%\USBCondom\Incoming` and `Safe`. Errors retain the import for manual review. These folders are ordinary folders, not an isolated sandbox. No automatic deletion is performed.
 
 ## Documentation
 
@@ -32,8 +32,8 @@ Imports live under `%LOCALAPPDATA%\USBGuard\Incoming` and `Safe`. Errors retain 
 ## Build
 
 ```powershell
-dotnet build src/USBGuard/USBGuard.csproj -c Release
-dotnet publish src/USBGuard/USBGuard.csproj -c Release -r win-x64 --self-contained true -o artifacts/app
+dotnet build src/USBCondom/USBCondom.csproj -c Release
+dotnet publish src/USBCondom/USBCondom.csproj -c Release -r win-x64 --self-contained true -o artifacts/app
 ```
 
 Compilation and hardware tests have not been performed in the authoring environment because it has runtimes but no .NET SDK.

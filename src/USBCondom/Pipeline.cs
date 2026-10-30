@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using System.IO;
-namespace USBGuard;
+namespace USBCondom;
 public record Entry(string Relative, bool Blocked);
 public static class Pipeline
 {
@@ -27,7 +27,7 @@ public static class Pipeline
     public static async Task<string> ImportAsync(string root, CancellationToken token)
     {
         if (new DriveInfo(root).DriveType != DriveType.Removable) throw new IOException("Select a removable drive.");
-        var basePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "USBGuard");
+        var basePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "USBCondom");
         if (Path.GetPathRoot(basePath)!.Equals(Path.GetPathRoot(root), StringComparison.OrdinalIgnoreCase)) throw new IOException("Staging must be on a different local drive.");
         var id = DateTime.UtcNow.ToString("yyyyMMdd-HHmmss") + "-" + Guid.NewGuid().ToString("N");
         var incoming = Path.Combine(basePath, "Incoming", id);

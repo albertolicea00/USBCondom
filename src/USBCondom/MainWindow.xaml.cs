@@ -2,7 +2,7 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Threading;
-namespace USBGuard;
+namespace USBCondom;
 public record Device(string Root, string Name);
 public partial class MainWindow : Window
 {
@@ -50,5 +50,5 @@ public partial class MainWindow : Window
         var result = await Task.Run(() => Pipeline.ImportAsync(device.Root, lifetime.Token));
         Status.Text = result;
     });
-    void OnEject(object sender, RoutedEventArgs e) => MessageBox.Show("Wait for operations to finish, then use Windows Safely Remove Hardware in the taskbar. USB Guard does not force removal.", "Eject device");
+    void OnEject(object sender, RoutedEventArgs e) => MessageBox.Show("Wait for operations to finish, then use Windows Safely Remove Hardware in the taskbar. USBCondom does not force removal.", "Eject device");
 }

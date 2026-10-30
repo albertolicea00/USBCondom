@@ -1,3 +1,3 @@
 using System.Windows;
-namespace USBGuard;
+namespace USBCondom;
 public partial class App : Application { }
